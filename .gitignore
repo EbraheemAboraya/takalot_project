@@ -1,0 +1,14 @@
+# Ignore package-lock.json
+/package-lock.json
+
+# Ignore the node_modules directory and its contents
+/node_modules/
+
+# Ignore Readme.md
+/Readme.md
+
+# Ignore .eslintrc (assuming it was a typo for .eslintrc)
+/.eslintrc
+
+# Ignore .env files
+.env
