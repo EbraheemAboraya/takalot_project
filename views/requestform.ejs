@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - Takalot</title>
+  <title>Request - Form</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -32,7 +32,7 @@
 
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="/home/helpseeker" class="logo d-flex align-items-center">
         <img src="/img/logo2.png" alt="" alt="" width="45" height="100">
         <span class="d-none d-lg-block">Takalot</span>
       </a>
@@ -237,11 +237,11 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+      <h1>Request Form</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item"><a href="/home/helpseeker">Home</a></li>
+          <li class="breadcrumb-item active">Add Request</li>
         </ol>
       </nav>
     </div>
@@ -256,27 +256,6 @@
 
               <!-- General Form Elements -->
               <form action="/home/request" method="POST" enctype="multipart/form-data">
-              
-                <!-- <div class="row mb-3">
-                    <label for="inputText" class="col-sm-3 col-form-label">Full Name:</label>
-                    <div class="col-sm-9">
-                        <input type="text" id="fullName" name="fullName" class="form-control">
-                    </div>
-                </div>
-            
-                <div class="row mb-3">
-                    <label for="inputNumber" class="col-sm-3 col-form-label">P.Number:</label>
-                    <div class="col-sm-9">
-                        <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control">
-                    </div>
-                </div>
-            
-                <div class="row mb-3">
-                    <label for="inputAddress" class="col-sm-3 col-form-label">Address:</label>
-                    <div class="col-sm-9">
-                        <input type="text" id="address" name="address" class="form-control">
-                    </div>
-                </div> -->
 
                 <% if (typeof requestID !== 'undefined' && requestID !== null) { %>
                   <input type="text" name="req_id" value="<%= requestID %>" style="display: none;">
@@ -312,8 +291,6 @@
         </div>
       </div>
     </section>
-    
-
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -331,7 +308,6 @@
   <script src="/vendor/tinymce/tinymce.min.js"></script>
   <script src="/vendor/php-email-form/validate.js"></script>
   <script>
-
     var jsonData = {
         "categories": ["pip", "power socket", "door handlers"]
     };

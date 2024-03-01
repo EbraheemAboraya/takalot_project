@@ -73,10 +73,10 @@ const getrequestspage = async (req, res) => {
       const technicalID = getParameter('technicalId');
       const tech_request = await techReqRepository.getReqById(technicalID);
       const requests = await requestRepository.gettAllReq(tech_request.requestID);
-     const helpseekerPromises = requests.map(request => {
-      return userRepository.getUserByID(request.helpseekerId);
-    });
-  const helpseekers = await Promise.all(helpseekerPromises);
+      const helpseekerPromises = requests.map(request => {
+        return userRepository.getUserByID(request.helpseekerId);
+      });
+      const helpseekers = await Promise.all(helpseekerPromises);
       res.render('requestecincal',{requests,helpseekers});
   } 
   catch (err) {
